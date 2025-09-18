@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atharva Dhumal // Definitive Portfolio</title>
+    <title>AD Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -298,43 +298,52 @@
                     <i class="fas fa-sun"></i>
                 </button>
                 <div class="md:hidden ml-4">
-                    <button id="menu-btn" type="button" class="relative z-50 block" style="color: var(--text-color-header);">
+                    <button id="menu-btn" type="button" class="relative z-[60] block" style="color: var(--text-color-header);">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-         <!-- Mobile Menu -->
-        <div id="menu" class="hidden md:hidden fixed top-0 left-0 h-screen w-screen z-50" style="background-color: var(--header-bg); backdrop-filter: blur(10px);">
-            <nav class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-bold" style="color: var(--text-color-header-hover);">
-                <a href="#about" class="hover:text-[var(--primary-glow)] transition-colors">About</a>
-                <a href="#education" class="hover:text-[var(--primary-glow)] transition-colors">Education</a>
-                <a href="#skills" class="hover:text-[var(--primary-glow)] transition-colors">Skills</a>
-                <a href="#certifications" class="hover:text-[var(--primary-glow)] transition-colors">Certifications</a>
-                <a href="#projects" class="hover:text-[var(--primary-glow)] transition-colors">Projects</a>
-                <a href="#contact" class="hover:text-[var(--primary-glow)] transition-colors">Contact</a>
-            </nav>
-        </div>
     </header>
     
+    <!-- Mobile Menu -->
+    <div id="menu" class="hidden md:hidden fixed top-0 left-0 h-screen w-screen z-50" style="background-color: var(--header-bg); backdrop-filter: blur(10px);">
+        <button id="close-menu-btn" class="absolute top-6 right-7 text-3xl" style="color: var(--text-color-header-hover);">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-bold" style="color: var(--text-color-header-hover);">
+            <a href="#about" class="hover:text-[var(--primary-glow)] transition-colors">About</a>
+            <a href="#education" class="hover:text-[var(--primary-glow)] transition-colors">Education</a>
+            <a href="#skills" class="hover:text-[var(--primary-glow)] transition-colors">Skills</a>
+            <a href="#certifications" class="hover:text-[var(--primary-glow)] transition-colors">Certifications</a>
+            <a href="#projects" class="hover:text-[var(--primary-glow)] transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-[var(--primary-glow)] transition-colors">Contact</a>
+        </nav>
+    </div>
+
     <!-- Main Content -->
     <main class="container mx-auto px-6">
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex flex-col justify-center">
-            <div class="max-w-3xl">
-                <p class="text-lg mono scroll-reveal visible" style="color: var(--primary-glow); transition-delay: 100ms;">Hi, my name is</p>
-                <h1 class="text-5xl md:text-7xl font-extrabold mt-4 scroll-reveal visible" style="color: var(--h1-color); transition-delay: 200ms;">Atharva Dhumal.</h1>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2 scroll-reveal visible" style="color: var(--h2-color); transition-delay: 300ms;">
-                    I am a <span id="typed-text" style="color: var(--h2-strong-color);"></span>
-                </h2>
-                <p class="mt-6 text-base max-w-xl leading-relaxed scroll-reveal visible" style="color: var(--p-color); transition-delay: 400ms;">
-                    I am a software developer with a strong foundation in creating high-quality digital solutions and scalable web applications. While I enjoy working across the full stack, I am increasingly focused on the field of data analysis — exploring how data can drive insights, optimize decision-making, and support business growth.
-                </p>
-                <p class="mt-4 text-base max-w-xl leading-relaxed scroll-reveal visible" style="color: var(--p-color); transition-delay: 500ms;">
-                    My goal is to leverage my technical expertise and analytical mindset to bridge the gap between software development and data-driven problem-solving, building solutions that are both functional and insight-rich.
-                </p>
-                 <div class="mt-8 scroll-reveal visible" style="transition-delay: 600ms;">
-                    <a href="#projects" class="glow-button">Check out my work!</a>
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+                <div class="max-w-3xl md:w-3/5 text-center md:text-left">
+                    <p class="text-lg mono scroll-reveal" style="color: var(--primary-glow);">Hi, my name is</p>
+                    <h1 class="text-5xl md:text-7xl font-extrabold mt-4 scroll-reveal" style="color: var(--h1-color); transition-delay: 100ms;">Atharva Dhumal.</h1>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 scroll-reveal" style="color: var(--h2-color); transition-delay: 200ms;">
+                        I am a <span id="typed-text" style="color: var(--h2-strong-color);"></span>
+                    </h2>
+                    <p class="mt-6 text-base max-w-xl leading-relaxed scroll-reveal mx-auto md:mx-0" style="color: var(--p-color); transition-delay: 300ms;">
+                        I am a software developer with expertise in building scalable applications, data analysis, and cybersecurity. I aim to create secure, insight-driven solutions that combine technical excellence with practical impact.
+                    </p>
+                    <div class="mt-8 scroll-reveal" style="transition-delay: 400ms;">
+                        <a href="#projects" class="glow-button">Check out my work!</a>
+                    </div>
+                </div>
+                <div class="md:w-2/5 flex justify-center scroll-reveal" style="transition-delay: 200ms;">
+                     <div class="w-60 h-60 md:w-80 md:h-80 relative group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary-glow)] to-[var(--secondary-glow)] rounded-lg transform -rotate-6 transition-transform duration-300 group-hover:rotate-0"></div>
+                        <img src="AtharvaPhoto.jpg" alt="Atharva Dhumal" class="relative w-full h-full object-cover rounded-lg shadow-xl">
+                    </div>
                 </div>
             </div>
         </section>
@@ -345,19 +354,11 @@
                 <span class="mr-4 mono" style="color: var(--primary-glow);">01.</span> About Me
             </h2>
             <div class="glass-container p-8 md:p-12">
-                <div class="grid md:grid-cols-3 gap-12 items-center">
-                    <div class="md:col-span-2 space-y-4" style="color: var(--p-color);">
-                        <p>Hello! I'm Atharva, a developer based in Mumbai with a strong passion for building innovative solutions on the internet. My journey into technology began with a curiosity about how things work, which has since evolved into a dedicated pursuit of a career in software development.</p>
-                        <p>As a Master of Computer Applications student, I’ve gained valuable exposure to a wide range of technologies and software engineering principles. I enjoy the challenge of transforming complex problems into elegant, intuitive, and functional applications.</p>
-                        <p>Alongside my development interests, I am also deeply curious about the field of data analysis. I enjoy learning how data can uncover insights, drive decision-making, and shape strategies, and I am eager to continue expanding my knowledge and skills in this domain.</p>
-                        <a href="27_AtharvaDhumal_2025.pdf" download="AtharvaDhumal_Resume.pdf" target="_blank" class="inline-block mt-4 glow-button text-sm px-6 py-3">Download CV</a>
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <div class="w-60 h-60 relative group">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary-glow)] to-[var(--secondary-glow)] rounded-lg transform -rotate-6 transition-transform duration-300 group-hover:rotate-0"></div>
-                             <img src="AtharvaPhoto.jpg" alt="Atharva Dhumal" class="relative w-full h-full object-cover rounded-lg shadow-xl">
-                        </div>
-                    </div>
+                <div class="space-y-4" style="color: var(--p-color);">
+                    <p>I am a Master of Computer Applications student based in Mumbai with a strong focus on software development. I design and build reliable, user-centric applications by applying solid engineering principles and a pragmatic approach to problem-solving.</p>
+                    <p>I have hands-on experience across a range of technologies and a growing interest in data analysis, where I leverage data to uncover insights that inform product decisions and business strategy.</p>
+                    <p>Additionally, I am actively developing skills in cybersecurity, driven by a commitment to protecting systems and sensitive data. I aim to deliver secure, data-driven solutions that combine technical excellence with measurable impact.</p>
+                    <a href="27_AtharvaDhumal_2025.pdf" download="AtharvaDhumal_Resume.pdf" target="_blank" class="inline-block mt-4 glow-button text-sm px-6 py-3">Download CV</a>
                 </div>
             </div>
         </section>
@@ -498,7 +499,7 @@
 
     <footer class="text-center py-8">
          <div class="flex justify-center gap-6 mb-4 text-xl">
-            <a href="https://github.com/AtharvaDhumal2905" target="_blank" class="transition-colors hover:text-[var(--primary-glow)]" style="color: var(--icon-color);"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/AtharvaDhumal2025" target="_blank" class="transition-colors hover:text-[var(--primary-glow)]" style="color: var(--icon-color);"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/atharva-dhumal-2a0939229/" target="_blank" class="transition-colors hover:text-[var(--primary-glow)]" style="color: var(--icon-color);"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.hackerrank.com/profile/atharva_dhumal03" target="_blank" class="transition-colors hover:text-[var(--primary-glow)]" style="color: var(--icon-color);"><i class="fab fa-hackerrank"></i></a>
         </div>
@@ -662,29 +663,24 @@
         const btn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
         const menuIcon = btn.querySelector('i');
+        const closeBtn = document.getElementById('close-menu-btn');
 
-        btn.addEventListener('click', () => {
-            const isHidden = menu.classList.toggle('hidden');
-            if (isHidden) {
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-                document.body.style.overflow = '';
-            } else {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-                document.body.style.overflow = 'hidden';
-            }
-        });
+        function openMenu() {
+            menu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            menu.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        btn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
 
         // Close menu when a link is clicked
         const menuLinks = menu.querySelectorAll('a');
         menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
 
         // Theme switcher
@@ -741,5 +737,3 @@
     </script>
 </body>
 </html>
-
-
